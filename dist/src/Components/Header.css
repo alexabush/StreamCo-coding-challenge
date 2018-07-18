@@ -1,0 +1,28 @@
+.Header {
+  background: rgb(0, 127, 250);
+  padding: 15px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Header h2 {
+  font-size: 1.7rem;
+  font-weight: 400;
+  text-shadow: 0.5px 1px black;
+}
+
+.Login-Link {
+  padding-right: 30px;
+}
+
+a {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 100;
+}
+
+.Free-Trial-Link {
+  background-color: rgb(54, 54, 54);
+  padding: 10px 15px;
+}

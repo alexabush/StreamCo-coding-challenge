@@ -1,0 +1,12 @@
+.Subheader {
+  background: rgb(65, 65, 65);
+  padding: 10px 100px;
+  /* font-weight: 100; */
+  font-size: 1.1rem;
+}
+
+.Subheader h2 {
+  font-size: 1.3rem;
+  font-weight: 300;
+  text-shadow: 0.5px 1px black;
+}

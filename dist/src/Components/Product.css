@@ -1,0 +1,13 @@
+.Product {
+  background: black;
+  padding: 45px 10px;
+  margin-bottom: 5px;
+  width: 120px;
+  height: 150px;
+}
+
+.Product h2 {
+  font-size: 0.9rem;
+  font-weight: 100;
+  text-transform: uppercase;
+}

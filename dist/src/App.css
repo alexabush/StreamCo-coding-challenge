@@ -1,0 +1,30 @@
+h1,
+h2,
+p,
+ul,
+li {
+  color: white;
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Raleway', sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+* {
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+.Flexbox-Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
