@@ -1,40 +1,49 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import './Main.css';
-import Product from './Product';
 
 class Main extends Component {
   state = {
-    shows: [{ title: 'Movies' }, { title: 'Series' }],
-    redirect: false
+    redirect: false,
+    redirectLocation: ''
   };
 
-  redirectToMovies = name => {
+  redirectToNewScreen = name => {
     console.log('clicked');
     this.setState({ redirect: true });
+    this.setState({ redirectLocation: name.toLowerCase() });
   };
 
   render() {
     if (this.state.redirect) {
-      return <Redirect to={'/movies'} />;
+      let redirectLocation = this.state.redirectLocation;
+      return <Redirect to={`/${redirectLocation}`} />;
     }
-    const showLis = this.state.shows.map(
-      ({ title, poster_path: image }, idx) => {
-        return (
-          <div
-            key={idx}
-            className="Product-Container"
-            onClick={this.redirect(title)}
-          >
-            <Product title={title} image={image} />
-            <p>{title}</p>
-          </div>
-        );
-      }
-    );
+
     return (
       <div className="Main">
-        <ul>{showLis}</ul>
+        <div className="Product-Container">
+          <div
+            className="Main__product-div"
+            onClick={() => {
+              this.redirectToNewScreen('series');
+            }}
+          >
+            <h2>Series</h2>
+          </div>
+          <p>Popular Movies</p>
+        </div>
+        <div className="Product-Container">
+          <div
+            className="Main__product-div"
+            onClick={() => {
+              this.redirectToNewScreen('movies');
+            }}
+          >
+            <h2>Movies</h2>
+          </div>
+          <p>Popular Series</p>
+        </div>
       </div>
     );
   }

@@ -17,8 +17,10 @@
 .DisplayMovies p {
   color: black;
   font-size: 0.6rem;
+  margin-left: 10px;
 }
 
-.Product-Container {
-  margin: 5px;
+.DisplayMovies__Product-Container {
+  margin-bottom: 25px;
+  max-width: 150px;
 }

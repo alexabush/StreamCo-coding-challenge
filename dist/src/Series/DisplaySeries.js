@@ -9,10 +9,13 @@ class DisplaySeries extends Component {
   };
 
   async componentDidMount() {
-    let recentseries = sample.entries.filter(data => {
+    let series = sample.entries.filter(show => {
+      return show.programType === 'series';
+    });
+    let recentSeries = series.filter(data => {
       return data.releaseYear >= 2010;
     });
-    let firstseries = recentseries.slice(0, 21);
+    let firstseries = recentSeries.slice(0, 21);
     let sortedseries = firstseries.sort((a, b) => {
       if (a.title < b.title) return -1;
       else if (b.title < a.title) return 1;
@@ -23,10 +26,10 @@ class DisplaySeries extends Component {
     });
   }
   render() {
-    const showLis = this.state.series.map(({ title, poster_path: image }) => {
+    const showLis = this.state.series.map(({ title, images }) => {
       return (
         <div className="Product-Container">
-          <Product title={title} image={image} />
+          <Product title={title} images={images} />
           <p>{title}</p>
         </div>
       );

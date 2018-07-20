@@ -6,12 +6,14 @@
 .DisplaySeries ul {
   display: flex;
   flex-wrap: wrap;
+  /* border: 1px solid blue; */
 }
 
 .DisplaySeries ul div {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* border: 1px solid orange; */
 }
 
 .DisplaySeries p {

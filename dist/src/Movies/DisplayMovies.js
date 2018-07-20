@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import './DisplayMovies.css';
 import Product from '../Components/Product';
 import sample from '../feed/sample.json';
@@ -9,9 +8,12 @@ class DisplayMovies extends Component {
     movies: []
   };
 
-  async componentDidMount() {
-    let recentMovies = sample.entries.filter(data => {
-      return data.releaseYear >= 2010;
+  componentDidMount() {
+    let movies = sample.entries.filter(show => {
+      return show.programType === 'movie';
+    });
+    let recentMovies = movies.filter(movie => {
+      return movie.releaseYear >= 2010;
     });
     let firstMovies = recentMovies.slice(0, 21);
     let sortedMovies = firstMovies.sort((a, b) => {
@@ -24,10 +26,10 @@ class DisplayMovies extends Component {
     });
   }
   render() {
-    const showLis = this.state.movies.map(({ title, poster_path: image }) => {
+    const showLis = this.state.movies.map(({ title, images }) => {
       return (
-        <div className="Product-Container">
-          <Product title={title} image={image} />
+        <div className="DisplayMovies__Product-Container">
+          <Product title={title} images={images} />
           <p>{title}</p>
         </div>
       );

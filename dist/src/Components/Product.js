@@ -5,8 +5,11 @@ class Product extends Component {
   render() {
     return (
       <div className="Product">
-        <img src={this.props.image} alt="" />
-        <h2>{this.props.title}</h2>
+        <img
+          className="Product__img"
+          src={this.props.images['Poster Art'].url}
+          alt="Image"
+        />
       </div>
     );
   }
