@@ -6,21 +6,21 @@
 .DisplaySeries ul {
   display: flex;
   flex-wrap: wrap;
-  /* border: 1px solid blue; */
 }
 
 .DisplaySeries ul div {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* border: 1px solid orange; */
 }
 
 .DisplaySeries p {
   color: black;
   font-size: 0.6rem;
+  margin-left: 10px;
 }
 
-.Product-Container {
-  margin: 5px;
+.DisplaySeries__Product-Container {
+  margin-bottom: 25px;
+  max-width: 150px;
 }

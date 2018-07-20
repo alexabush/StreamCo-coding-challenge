@@ -7,7 +7,4 @@
 
 .Product__img {
   object-fit: contain;
-  /* object-fit: scale-down; */
-  /* width: 120px; */
-  /* max-height: 150px; */
 }

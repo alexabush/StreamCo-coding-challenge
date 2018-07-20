@@ -28,7 +28,7 @@ class DisplaySeries extends Component {
   render() {
     const showLis = this.state.series.map(({ title, images }) => {
       return (
-        <div className="Product-Container">
+        <div className="DisplaySeries__Product-Container">
           <Product title={title} images={images} />
           <p>{title}</p>
         </div>
